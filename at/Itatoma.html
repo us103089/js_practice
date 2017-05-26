@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Itatoma おみくじ</title>
+  <meta name="description" content="Itatoma">
+  <meta name="author" content="A.Niimura">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">おみくじアプリ</header>
+
+  <main class="main">
+    <div class="msg">
+      <p id="display">ここに結果が表示されるよ〜</p>
+  </div>
+
+  <div id="btn">
+  <!--<a href="#" class="button normal">ボタン</a>-->
+  <form><input type="button" value="ボタン" onclick="omikuji()"　class="btn"></form>
+</div>
+  <script>
+  function　omikuji(){
+    var results=['大吉','中吉','吉','小吉','末吉','凶','大凶'];
+
+    var result=Math.floor(Math.random() * results.length);
+
+    var omikuji=results[result];
+
+    document.getElementById('display').textContent=omikuji;
+
+
+  }
+  </script>
+
+
+
+</main>
+
+</body>
+</html>
